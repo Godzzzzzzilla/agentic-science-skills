@@ -1,0 +1,28 @@
+# citation-align-manager resource manifest
+skill: citation-align-manager
+version: 1.1.0
+entry: SKILL.md
+github: https://github.com/Godzzzzzzilla/agentic-science-skills/tree/main/skills/citation-align-manager
+files:
+  - path: SKILL.md
+    role: agent-facing workflow (align/adjudicate/finalize/audit + conservative merge rules)
+  - path: README.md
+    role: usage, methods, scope, limits
+  - path: manifest.yaml
+    role: resource inventory
+  - path: GITHUB_URL.txt
+    role: public GitHub link
+  - path: scripts/run.py
+    role: engine — citation parsing, particle-aware author keys, duplicate groups, first-occurrence renumbering, verbatim-preserving finalize
+  - path: scripts/audit.py
+    role: one-command recheck — numbering, resolution, dedup, verbatim metadata, unresolved transparency
+  - path: scripts/selftest.py
+    role: synthetic manuscript with DOI duplicate, particle surname, unresolved citation
+  - path: references/output-contract.md
+    role: result.json schema + merge-rule semantics
+constraints:
+  utf8_text_files: 8
+  max_bytes_per_file: 500KB
+  total_bytes: well under 2MB
+  symlinks: none
+  runtime_deps: python3 stdlib only
