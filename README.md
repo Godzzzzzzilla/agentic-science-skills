@@ -15,6 +15,7 @@ engine + one-command audit + selftest), and `references/` (schemas, examples, ra
 | skills/academic-polish-audit | product-arena-02 | 写作02｜学术语言润色 |
 | skills/citation-align-manager | product-arena-03 | 写作04｜参考文献与引用管理 |
 | skills/pdf-layout-parse | product-arena-08 | 阅读01｜文献文档解析 |
+| skills/translate-with-glossary-lock | product-arena-01 | 阅读03｜文献翻译 |
 
 Every deliverable is designed around **verifiability**: results carry machine-checkable
 anchors (page + char-span + verbatim quote) that a bundled audit script re-verifies
