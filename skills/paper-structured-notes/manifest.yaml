@@ -1,0 +1,32 @@
+# paper-structured-notes resource manifest
+skill: paper-structured-notes
+version: 1.1.0
+entry: SKILL.md
+github: https://github.com/Godzzzzzzilla/agentic-science-skills/tree/main/skills/paper-structured-notes
+files:
+  - path: SKILL.md
+    role: agent-facing workflow (frontmatter name/description + 8-section protocol)
+  - path: README.md
+    role: human-facing usage, methods, scope, limits, maintenance
+  - path: manifest.yaml
+    role: this file — resource inventory
+  - path: GITHUB_URL.txt
+    role: GitHub public link for the work (first line)
+  - path: scripts/run.py
+    role: deterministic engine — extract stage (case parse, multi-backend PDF/text extraction, segmentation, anchors) and finalize stage (validation + merge into contract-true result.json); top-level try/except, never rejects
+  - path: scripts/audit.py
+    role: one-command verification — re-slices every quote from the source, checks contract coverage, note wiring, status; exit 0/1
+  - path: scripts/selftest.py
+    role: bundled synthetic-case end-to-end self-test (extract -> notes -> finalize -> audit -> robustness probe)
+  - path: references/output-contract.md
+    role: full result.json schema + field semantics
+  - path: references/example.md
+    role: worked synthetic example (marked as example)
+  - path: references/why-verifiable.md
+    role: design rationale — verifiability over verbosity
+constraints:
+  utf8_text_files: 10
+  max_bytes_per_file: 500KB
+  total_bytes: well under 2MB
+  symlinks: none
+  runtime_deps: python3 stdlib only (optional PDF backends probed)
