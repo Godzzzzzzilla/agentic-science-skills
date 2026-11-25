@@ -1,0 +1,26 @@
+# nanopub-assertion-miner resource manifest
+skill: nanopub-assertion-miner
+version: 1.1.0
+entry: SKILL.md
+github: https://github.com/Godzzzzzzilla/agentic-science-skills/tree/main/skills/nanopub-assertion-miner
+files:
+  - path: SKILL.md
+    role: agent-facing workflow (collect/decompose/verify + decomposition rules)
+  - path: README.md
+    role: usage, methods, scope, limits
+  - path: manifest.yaml
+    role: resource inventory
+  - path: GITHUB_URL.txt
+    role: public GitHub link
+  - path: scripts/run.py
+    role: engine — JATS/JSON/text paragraph resolution, schema field-exactness, quote re-slicing, atomicity hints, contract-true finalize
+  - path: scripts/audit.py
+    role: one-command recheck — independent material re-collection + schema/quote verification
+  - path: scripts/selftest.py
+    role: JATS parsing, grounded pass, drift/unknown-id failures
+constraints:
+  utf8_text_files: 7
+  max_bytes_per_file: 500KB
+  total_bytes: well under 2MB
+  symlinks: none
+  runtime_deps: python3 stdlib only
