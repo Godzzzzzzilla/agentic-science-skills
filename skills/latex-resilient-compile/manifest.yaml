@@ -1,0 +1,26 @@
+# latex-resilient-compile resource manifest
+skill: latex-resilient-compile
+version: 1.1.0
+entry: SKILL.md
+github: https://github.com/Godzzzzzzilla/agentic-science-skills/tree/main/skills/latex-resilient-compile
+files:
+  - path: SKILL.md
+    role: agent-facing workflow (prepare/fix/compile + fix classes + degrade-not-die)
+  - path: README.md
+    role: usage, methods, scope, limits
+  - path: manifest.yaml
+    role: resource inventory
+  - path: GITHUB_URL.txt
+    role: public GitHub link
+  - path: scripts/run.py
+    role: engine — source analysis (ampersand lines, env balance, packages, fields), multi-backend compile, log triage, honest statuses
+  - path: scripts/audit.py
+    role: one-command recheck — contract, ampersand-report consistency, diagnosis file+line, PDF honesty
+  - path: scripts/selftest.py
+    role: broken source (diagnosis+partial) and clean source (success when TeX exists)
+constraints:
+  utf8_text_files: 7
+  max_bytes_per_file: 500KB
+  total_bytes: well under 2MB
+  symlinks: none
+  runtime_deps: python3 stdlib; TeX binaries probed (latexmk/pdflatex/xelatex/tectonic)

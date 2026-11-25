@@ -18,6 +18,7 @@ engine + one-command audit + selftest), and `references/` (schemas, examples, ra
 | skills/translate-with-glossary-lock | product-arena-01 | 阅读03｜文献翻译 |
 | skills/claim-grounded-intro | product-arena-04 | 写作08｜引言与相关工作写作 |
 | skills/methods-repro-writer | product-arena-05 | 写作09｜方法与实验章节写作 |
+| skills/latex-resilient-compile | product-arena-07 | 写作13｜LaTeX 写作与编译 |
 
 Every deliverable is designed around **verifiability**: results carry machine-checkable
 anchors (page + char-span + verbatim quote) that a bundled audit script re-verifies
